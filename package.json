@@ -1,0 +1,46 @@
+{
+  "name": "meta-surf",
+  "version": "1.0.0",
+  "description": "one small step for man...",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env PORT=4000 react-scripts start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/url-join": "^4.0.0",
+    "cross-env": "^7.0.0",
+    "cross-fetch": "^3.0.4",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.0",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.4.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "url-join": "^4.0.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.23",
+    "@types/react-dom": "^16.9.5",
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.8.3",
+    "webpack": "4.41.5",
+    "webpack-cli": "^3.3.11"
+  }
+}
