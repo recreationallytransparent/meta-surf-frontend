@@ -17,7 +17,7 @@ interface Environment {
 
 let environment = {} as Environment
 
-environment.baseUrl = "localhost:8080"
+environment.baseUrl = "http://localhost:8080"
 environment.client = getClient(environment.baseUrl)
 
 export default environment

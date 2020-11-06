@@ -1,3 +1,5 @@
+import {Break} from "../breaks/types";
+
 export interface WaveDetails {
     swellHeightM: number,
     swellDirection: string,
@@ -25,12 +27,13 @@ export interface BreakForecast {
     forecast: [BreakDetails]
 }
 
+export type BreakForecastSource = [string, BreakForecast]
 export interface MetaForecast {
-    forecasts: [string, BreakForecast][]
+    forecasts: BreakForecastSource[]
 }
 
 export interface ForecastState {
-    forecasts: MetaForecast[],
+    forecasts: Record<string, MetaForecast>,
     loading: boolean
 }
 
@@ -46,6 +49,7 @@ export interface GetForecast {
 export interface ReceiveForecast {
     type: typeof RECEIVE_FORECAST
     forecast: MetaForecast
+    breakId: string
 }
 
 export type ForecastActionTypes = GetForecast | ReceiveForecast

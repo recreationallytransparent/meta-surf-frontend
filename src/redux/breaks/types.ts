@@ -10,13 +10,15 @@ export interface Break {
     bestWind: string
 }
 
-export interface BreaksState {
-    breaks: Break[],
-    loading: boolean
+export interface BreaksResponse {
+    breaks: Break[]
 }
 
+
+
 export const GET_BREAK = "GET_BREAK"
-export const RECEIVE_BREAK = "RECEIVE_BREAK"
+export const RECEIVE_BREAKS = "RECEIVE_BREAKS"
+export const SELECT_BREAK = "SELECT_BREAK"
 
 export interface GetBreak {
     type: typeof GET_BREAK,
@@ -24,10 +26,15 @@ export interface GetBreak {
 }
 
 export interface ReceiveBreak {
-    type: typeof RECEIVE_BREAK
+    type: typeof RECEIVE_BREAKS
+    breaks: Break[]
+}
+
+export interface SelectBreak {
+    type: typeof SELECT_BREAK,
     break: Break
 }
 
-export type BreakActionTypes = GetBreak | ReceiveBreak
+export type BreakActionTypes = GetBreak | ReceiveBreak | SelectBreak
 
 
